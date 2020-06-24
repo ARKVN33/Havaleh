@@ -1,0 +1,181 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6D386F91-52DD-4698-9B73-81E519C07A9E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DAL</RootNamespace>
+    <AssemblyName>DAL</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net">
+      <HintPath>..\Havaleh\bin\Debug\BCrypt.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="PersianDateTime, Version=1.1.5082.36395, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PersianDateTime.1.1.5082.36395\lib\net40\PersianDateTime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class\DBuyer.cs" />
+    <Compile Include="Class\DCapacity.cs" />
+    <Compile Include="Class\DDriver.cs" />
+    <Compile Include="Class\DFactory.cs" />
+    <Compile Include="Class\DHavaleh.cs" />
+    <Compile Include="Class\DLicense.cs" />
+    <Compile Include="Class\DProduct.cs" />
+    <Compile Include="Class\DSelectProduct.cs" />
+    <Compile Include="Class\DUser.cs" />
+    <Compile Include="Class\DUserLogin.cs" />
+    <Compile Include="Class\DVehicle.cs" />
+    <Compile Include="Class\Globals.cs" />
+    <Compile Include="Class\HavalehDbChanges.cs" />
+    <Compile Include="Class\HavalehDbConfiguration.cs" />
+    <Compile Include="HavalehModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HavalehModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HavalehModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="HavalehModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HavalehModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="spSelectViewHavaleh_Result.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spSelectViewSelectProduct_Result.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblBuyer.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCapacity.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblCounty.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblDriver.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblFactory.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblHavaleh.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblLicense.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblPostType.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProduct.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblProvince.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSecurityAccess.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSecurityQuestion.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSelectProduct.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblSundry.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblUser.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="tblVehicleType.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="viewHavaleh.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="viewSelectProduct.cs">
+      <DependentUpon>HavalehModel.tt</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.Config" />
+    <EntityDeploy Include="HavalehModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>HavalehModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="HavalehModel.edmx.diagram">
+      <DependentUpon>HavalehModel.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HavalehModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HavalehModel.edmx</DependentUpon>
+      <LastGenOutput>HavalehModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="HavalehModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>HavalehModel.edmx</DependentUpon>
+      <LastGenOutput>HavalehModel.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

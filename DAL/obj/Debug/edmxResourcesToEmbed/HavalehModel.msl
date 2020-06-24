@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="dbHavalehModelStoreContainer" CdmEntityContainer="dbHavalehEntities">
+    <EntitySetMapping Name="tblBuyer">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblBuyer">
+        <MappingFragment StoreEntitySet="tblBuyer">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCapacity">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblCapacity">
+        <MappingFragment StoreEntitySet="tblCapacity">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="CapacityName" ColumnName="CapacityName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblCounty">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblCounty">
+        <MappingFragment StoreEntitySet="tblCounty">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Province_Id" ColumnName="Province_Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblDriver">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblDriver">
+        <MappingFragment StoreEntitySet="tblDriver">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="DriverMobile" ColumnName="DriverMobile" />
+          <ScalarProperty Name="NumberPlates" ColumnName="NumberPlates" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblFactory">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblFactory">
+        <MappingFragment StoreEntitySet="tblFactory">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblHavaleh">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblHavaleh">
+        <MappingFragment StoreEntitySet="tblHavaleh">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factory_Id" ColumnName="Factory_Id" />
+          <ScalarProperty Name="County_Id" ColumnName="County_Id" />
+          <ScalarProperty Name="Buyer_Id" ColumnName="Buyer_Id" />
+          <ScalarProperty Name="Driver_Id" ColumnName="Driver_Id" />
+          <ScalarProperty Name="VehicleType_Id" ColumnName="VehicleType_Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="HavlehNumber" ColumnName="HavlehNumber" />
+          <ScalarProperty Name="HavlehDate" ColumnName="HavlehDate" />
+          <ScalarProperty Name="HavalehEndDate" ColumnName="HavalehEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblLicense">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblLicense">
+        <MappingFragment StoreEntitySet="tblLicense">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="AppLicense" ColumnName="AppLicense" />
+          <ScalarProperty Name="AppVersion" ColumnName="AppVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblPostType">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblPostType">
+        <MappingFragment StoreEntitySet="tblPostType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="PostType" ColumnName="PostType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProduct">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblProduct">
+        <MappingFragment StoreEntitySet="tblProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblProvince">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblProvince">
+        <MappingFragment StoreEntitySet="tblProvince">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSecurityAccess">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblSecurityAccess">
+        <MappingFragment StoreEntitySet="tblSecurityAccess">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Time" ColumnName="Time" />
+          <ScalarProperty Name="Counter" ColumnName="Counter" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSecurityQuestion">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblSecurityQuestion">
+        <MappingFragment StoreEntitySet="tblSecurityQuestion">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="SecurityQuestion" ColumnName="SecurityQuestion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSelectProduct">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblSelectProduct">
+        <MappingFragment StoreEntitySet="tblSelectProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Havaleh_Id" ColumnName="Havaleh_Id" />
+          <ScalarProperty Name="Capacity_Id" ColumnName="Capacity_Id" />
+          <ScalarProperty Name="CapacityNumber" ColumnName="CapacityNumber" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblSundry">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblSundry">
+        <MappingFragment StoreEntitySet="tblSundry">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="RegisteredAdminPassword" ColumnName="RegisteredAdminPassword" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblUser">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblUser">
+        <MappingFragment StoreEntitySet="tblUser">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="User_PostType_Id" ColumnName="User_PostType_Id" />
+          <ScalarProperty Name="User_SecurityQuestion_Id" ColumnName="User_SecurityQuestion_Id" />
+          <ScalarProperty Name="UserFirstName" ColumnName="UserFirstName" />
+          <ScalarProperty Name="UserLastName" ColumnName="UserLastName" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="UserPassword" ColumnName="UserPassword" />
+          <ScalarProperty Name="UserMobileNumber" ColumnName="UserMobileNumber" />
+          <ScalarProperty Name="UserEmail" ColumnName="UserEmail" />
+          <ScalarProperty Name="UserAnswer" ColumnName="UserAnswer" />
+          <ScalarProperty Name="UserRegistrationDate" ColumnName="UserRegistrationDate" />
+          <ScalarProperty Name="UserImage" ColumnName="UserImage" />
+          <ScalarProperty Name="UserDescription" ColumnName="UserDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tblVehicleType">
+      <EntityTypeMapping TypeName="dbHavalehModel.tblVehicleType">
+        <MappingFragment StoreEntitySet="tblVehicleType">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="VehicleTypeName" ColumnName="VehicleTypeName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewHavaleh">
+      <EntityTypeMapping TypeName="dbHavalehModel.viewHavaleh">
+        <MappingFragment StoreEntitySet="viewHavaleh">
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+          <ScalarProperty Name="Province_Id" ColumnName="Province_Id" />
+          <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="DriverMobile" ColumnName="DriverMobile" />
+          <ScalarProperty Name="NumberPlates" ColumnName="NumberPlates" />
+          <ScalarProperty Name="VehicleTypeName" ColumnName="VehicleTypeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factory_Id" ColumnName="Factory_Id" />
+          <ScalarProperty Name="County_Id" ColumnName="County_Id" />
+          <ScalarProperty Name="Buyer_Id" ColumnName="Buyer_Id" />
+          <ScalarProperty Name="Driver_Id" ColumnName="Driver_Id" />
+          <ScalarProperty Name="VehicleType_Id" ColumnName="VehicleType_Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="HavlehNumber" ColumnName="HavlehNumber" />
+          <ScalarProperty Name="HavlehDate" ColumnName="HavlehDate" />
+          <ScalarProperty Name="HavalehEndDate" ColumnName="HavalehEndDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="viewSelectProduct">
+      <EntityTypeMapping TypeName="dbHavalehModel.viewSelectProduct">
+        <MappingFragment StoreEntitySet="viewSelectProduct">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Havaleh_Id" ColumnName="Havaleh_Id" />
+          <ScalarProperty Name="Capacity_Id" ColumnName="Capacity_Id" />
+          <ScalarProperty Name="CapacityNumber" ColumnName="CapacityNumber" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="CapacityName" ColumnName="CapacityName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="spSelectViewHavaleh" FunctionName="dbHavalehModel.Store.spSelectViewHavaleh">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHavalehModel.spSelectViewHavaleh_Result">
+          <ScalarProperty Name="FactoryName" ColumnName="FactoryName" />
+          <ScalarProperty Name="CountyName" ColumnName="CountyName" />
+          <ScalarProperty Name="Province_Id" ColumnName="Province_Id" />
+          <ScalarProperty Name="ProvinceName" ColumnName="ProvinceName" />
+          <ScalarProperty Name="BuyerName" ColumnName="BuyerName" />
+          <ScalarProperty Name="DriverName" ColumnName="DriverName" />
+          <ScalarProperty Name="DriverMobile" ColumnName="DriverMobile" />
+          <ScalarProperty Name="NumberPlates" ColumnName="NumberPlates" />
+          <ScalarProperty Name="VehicleTypeName" ColumnName="VehicleTypeName" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Factory_Id" ColumnName="Factory_Id" />
+          <ScalarProperty Name="County_Id" ColumnName="County_Id" />
+          <ScalarProperty Name="Buyer_Id" ColumnName="Buyer_Id" />
+          <ScalarProperty Name="Driver_Id" ColumnName="Driver_Id" />
+          <ScalarProperty Name="VehicleType_Id" ColumnName="VehicleType_Id" />
+          <ScalarProperty Name="Date" ColumnName="Date" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="HavlehNumber" ColumnName="HavlehNumber" />
+          <ScalarProperty Name="HavlehDate" ColumnName="HavlehDate" />
+          <ScalarProperty Name="HavalehEndDate" ColumnName="HavalehEndDate" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="spSelectViewSelectProduct" FunctionName="dbHavalehModel.Store.spSelectViewSelectProduct">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="dbHavalehModel.spSelectViewSelectProduct_Result">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Havaleh_Id" ColumnName="Havaleh_Id" />
+          <ScalarProperty Name="Capacity_Id" ColumnName="Capacity_Id" />
+          <ScalarProperty Name="CapacityNumber" ColumnName="CapacityNumber" />
+          <ScalarProperty Name="Product_Id" ColumnName="Product_Id" />
+          <ScalarProperty Name="CapacityName" ColumnName="CapacityName" />
+          <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+  </EntityContainerMapping>
+</Mapping>

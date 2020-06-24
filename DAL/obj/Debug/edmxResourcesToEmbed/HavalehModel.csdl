@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="dbHavalehModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tblBuyer">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BuyerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblCapacity">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CapacityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblCounty">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Province_Id" Type="Int16" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+  </EntityType>
+  <EntityType Name="tblDriver">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DriverName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DriverMobile" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="NumberPlates" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblFactory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FactoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblHavaleh">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Factory_Id" Type="Int16" />
+    <Property Name="County_Id" Type="Int16" />
+    <Property Name="Buyer_Id" Type="Int16" />
+    <Property Name="Driver_Id" Type="Int32" />
+    <Property Name="VehicleType_Id" Type="Int16" />
+    <Property Name="Date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavlehNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavlehDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavalehEndDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblLicense">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="AppLicense" Type="String" MaxLength="40" FixedLength="false" Unicode="true" />
+    <Property Name="AppVersion" Type="String" MaxLength="7" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblPostType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="PostType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblProvince">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSecurityAccess">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Time" Type="String" MaxLength="19" FixedLength="false" Unicode="true" />
+    <Property Name="Counter" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSecurityQuestion">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Byte" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="SecurityQuestion" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblSelectProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Havaleh_Id" Type="Int32" />
+    <Property Name="Capacity_Id" Type="Byte" />
+    <Property Name="CapacityNumber" Type="Byte" />
+    <Property Name="Product_Id" Type="Byte" />
+  </EntityType>
+  <EntityType Name="tblSundry">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="RegisteredAdminPassword" Type="Boolean" />
+  </EntityType>
+  <EntityType Name="tblUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="User_PostType_Id" Type="Byte" />
+    <Property Name="User_SecurityQuestion_Id" Type="Byte" />
+    <Property Name="UserFirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserLastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserPassword" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+    <Property Name="UserMobileNumber" Type="String" MaxLength="11" FixedLength="false" Unicode="true" />
+    <Property Name="UserEmail" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="UserAnswer" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="UserRegistrationDate" Type="String" MaxLength="19" FixedLength="false" Unicode="true" />
+    <Property Name="UserImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="UserDescription" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="tblVehicleType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="VehicleTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="viewHavaleh">
+    <Key>
+      <PropertyRef Name="CountyName" />
+      <PropertyRef Name="Province_Id" />
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="FactoryName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="CountyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Province_Id" Type="Int16" Nullable="false" />
+    <Property Name="ProvinceName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BuyerName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DriverName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DriverMobile" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+    <Property Name="NumberPlates" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="VehicleTypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Factory_Id" Type="Int16" />
+    <Property Name="County_Id" Type="Int16" />
+    <Property Name="Buyer_Id" Type="Int16" />
+    <Property Name="Driver_Id" Type="Int32" />
+    <Property Name="VehicleType_Id" Type="Int16" />
+    <Property Name="Date" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Number" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavlehNumber" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavlehDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="HavalehEndDate" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="viewSelectProduct">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Havaleh_Id" Type="Int32" />
+    <Property Name="Capacity_Id" Type="Byte" />
+    <Property Name="CapacityNumber" Type="Byte" />
+    <Property Name="Product_Id" Type="Byte" />
+    <Property Name="CapacityName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="dbHavalehEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tblBuyer" EntityType="Self.tblBuyer" />
+    <EntitySet Name="tblCapacity" EntityType="Self.tblCapacity" />
+    <EntitySet Name="tblCounty" EntityType="Self.tblCounty" />
+    <EntitySet Name="tblDriver" EntityType="Self.tblDriver" />
+    <EntitySet Name="tblFactory" EntityType="Self.tblFactory" />
+    <EntitySet Name="tblHavaleh" EntityType="Self.tblHavaleh" />
+    <EntitySet Name="tblLicense" EntityType="Self.tblLicense" />
+    <EntitySet Name="tblPostType" EntityType="Self.tblPostType" />
+    <EntitySet Name="tblProduct" EntityType="Self.tblProduct" />
+    <EntitySet Name="tblProvince" EntityType="Self.tblProvince" />
+    <EntitySet Name="tblSecurityAccess" EntityType="Self.tblSecurityAccess" />
+    <EntitySet Name="tblSecurityQuestion" EntityType="Self.tblSecurityQuestion" />
+    <EntitySet Name="tblSelectProduct" EntityType="Self.tblSelectProduct" />
+    <EntitySet Name="tblSundry" EntityType="Self.tblSundry" />
+    <EntitySet Name="tblUser" EntityType="Self.tblUser" />
+    <EntitySet Name="tblVehicleType" EntityType="Self.tblVehicleType" />
+    <EntitySet Name="viewHavaleh" EntityType="Self.viewHavaleh" />
+    <EntitySet Name="viewSelectProduct" EntityType="Self.viewSelectProduct" />
+    <FunctionImport Name="spSelectViewHavaleh" ReturnType="Collection(dbHavalehModel.spSelectViewHavaleh_Result)" />
+    <FunctionImport Name="spSelectViewSelectProduct" ReturnType="Collection(dbHavalehModel.spSelectViewSelectProduct_Result)" />
+  </EntityContainer>
+  <ComplexType Name="spSelectViewHavaleh_Result">
+    <Property Type="String" Name="FactoryName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="CountyName" Nullable="false" MaxLength="50" />
+    <Property Type="Int16" Name="Province_Id" Nullable="false" />
+    <Property Type="String" Name="ProvinceName" Nullable="true" MaxLength="50" />
+    <Property Type="String" Name="BuyerName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DriverName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="DriverMobile" Nullable="true" MaxLength="13" />
+    <Property Type="String" Name="NumberPlates" Nullable="true" MaxLength="15" />
+    <Property Type="String" Name="VehicleTypeName" Nullable="true" MaxLength="50" />
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int16" Name="Factory_Id" Nullable="true" />
+    <Property Type="Int16" Name="County_Id" Nullable="true" />
+    <Property Type="Int16" Name="Buyer_Id" Nullable="true" />
+    <Property Type="Int32" Name="Driver_Id" Nullable="true" />
+    <Property Type="Int16" Name="VehicleType_Id" Nullable="true" />
+    <Property Type="String" Name="Date" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="Number" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HavlehNumber" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HavlehDate" Nullable="true" MaxLength="10" />
+    <Property Type="String" Name="HavalehEndDate" Nullable="true" MaxLength="10" />
+  </ComplexType>
+  <ComplexType Name="spSelectViewSelectProduct_Result">
+    <Property Type="Int32" Name="Id" Nullable="false" />
+    <Property Type="Int32" Name="Havaleh_Id" Nullable="true" />
+    <Property Type="Byte" Name="Capacity_Id" Nullable="true" />
+    <Property Type="Byte" Name="CapacityNumber" Nullable="true" />
+    <Property Type="Byte" Name="Product_Id" Nullable="true" />
+    <Property Type="String" Name="CapacityName" Nullable="true" MaxLength="100" />
+    <Property Type="String" Name="ProductName" Nullable="true" MaxLength="50" />
+  </ComplexType>
+</Schema>
